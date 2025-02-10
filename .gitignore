@@ -1,0 +1,14 @@
+
+*.key
+*.out
+*.o
+*.json
+*.out
+*.der
+*.pem
+*.txt
+*__pycache__
+*.vscode
+*.class
+*.jar
+*main

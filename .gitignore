@@ -11,4 +11,5 @@
 *.vscode
 *.class
 *.jar
-*main
+*.pytest_cache
+*.benchmarks

@@ -13,3 +13,4 @@
 *.jar
 *.pytest_cache
 *.benchmarks
+*.lock

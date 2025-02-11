@@ -1,0 +1,20 @@
+[package]
+name = "ring"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+openssl = "0.10"
+rand = "0.8"
+criterion = { version = "0.4", features = ["html_reports"] }
+serde_json = "1.0"
+
+[[bench]]
+name = "carregar-2048"
+harness = false
+
+[[bench]]
+name = "carregar-4096"
+harness = false

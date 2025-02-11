@@ -136,7 +136,7 @@ cargo benchmark
 The experiments were conducted on a machine with an AMD Ryzen 5 processor (64-bit), 12 GB of RAM, and Debian 12 (Bookworm - 64-bit) operating system. The executions took place in the GNOME graphical interface, considering system processes and the terminal running during the tests, which were conducted over 6 days.
 Certain standards were adopted to ensure consistency. For all executions, a message file in the .txt format with 90 bytes was used, corresponding to the maximum padding allowed by a 2048-bit RSA key in the JavaScript Forge library. The 2048 and 4096-bit keys were pre-generated with OpenSSL and used in the encryption and decryption processes across all languages. This way, the implementations load the message and public and private keys directly into the code, ensuring stability in the obtained results. A summary of the results is shown below:
 
-### Encryption - 2048 bits
+### Encryption
 
 | Key   | Library           | Mean time (ms)|
 |-------|-------------------|---------------|
@@ -152,9 +152,6 @@ Certain standards were adopted to ensure consistency. For all executions, a mess
 |       | Rust Crypto       | 0,2528954308  |
 |       | Pycryptodome      | 0,4669065086  |
 |       | Forge             | 0,8983660542  |
----
-
-### Encryption - 4096 bits
 
 | Key   | Library           | Mean time (ms)|
 |-------|-------------------|---------------|
@@ -170,8 +167,9 @@ Certain standards were adopted to ensure consistency. For all executions, a mess
 |       | Rust Crypto       | 0,9493025126  |
 |       | Pycryptodome      | 0,9540326783  |
 |       | Forge             | 3,380141842   |
+---
 
-### Decryption - 2048 bits
+### Decryption
 
 | Key   | Library           | Mean time (ms)|
 |-------|-------------------|---------------|
@@ -188,7 +186,6 @@ Certain standards were adopted to ensure consistency. For all executions, a mess
 |       | Libgcrypt         | 9,306325673   |
 |       | Forge             | 24,50991604   |
 
-### Decryption - 4096 bits
 
 | Key   | Library           | Mean time (ms)|
 |-------|-------------------|---------------|
